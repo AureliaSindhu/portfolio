@@ -2,16 +2,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Lia's Website </title>
+    <title> Lia's Portfolio </title>
 
     <!-- icon -->
-
-    <!-- css -->
+    <link rel = "icon" href = "pic/icon.png"> 
+    <!-- css + js -->
     <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "script.js">
     <!-- font -->
 </head>
 
 <body>
+    <!-- <div class = "header">
+        <object type="text/html" data="attributes/heading.html"></object>
+    </div> -->
 
+    <div class = "navbar">
+        <h1>Aurelia Sindhu </h1>
+        
+        <div class = "right-side">
+            <a href = "#about"> About Me </a>
+            <a href = "#projects"> Projects </a>
+            <a href = "#resume"> Resume </a>
+        </div>
+    </div>
+
+    <section id = "about">
+        <h1> ##</h1>
+    </section>
+
+    <section id = "projects">
+        <h1> ## </h1>
+    </section>
+
+    <section id = "resume">
+        <h1> ## </h1>
+    </section>
+
+    <div class = "footer">
+        <p> More Links </p>
+    </div>
+
+    <div class = "copyright">
+        <!-- <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span> Aurelia Sindhunirmala</span> | all rights reserved</div> -->
+        <div class="credit">&copy; <span id="currentYear"></span> by <span>Aurelia Sindhunirmala</span> | all rights reserved</div>
+    </div>
 </body>
 </html>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
