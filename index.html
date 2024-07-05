@@ -5,7 +5,7 @@
     <title> Lia's Portfolio </title>
 
     <!-- icon -->
-    <link rel = "icon" href = "pic/icon2.png"> 
+    <link rel = "icon" href = "pic/logo4.png"> 
     <!-- css + js -->
     <link rel = "stylesheet" href = "style.css">
     <link rel = "stylesheet" href = "script.js">
@@ -22,8 +22,9 @@
 
     <div class = "navbar">
         <div class = "left-side">
-            <img src = "pic/icon2.png"/ alt = "logo" width = "48px">
-            <h1 style="font-weight: bold;"> | Aurelia S. </h1>
+            <!-- <img src = "pic/icon2.png"/ alt = "logo" width = "48px"> -->
+            <img src = "pic/logo4.png"/ alt = "logo" width = "48px">
+            <!-- <h1 style="font-weight: bold;"> Aurelia Sindhu </h1> -->
         </div>
         
         <div class = "right-side">
@@ -34,23 +35,24 @@
     </div>
 
     <section id = "about">
-        <h2 class="auto-type"> ## </h2>
-        <p> I am a college student majoring in computer science. </p>
-        <!-- i am a (student, designer, programmer, baker, traveler) -->
+        <h1 class="title"> Aurelia Sindhunirmala </h1>
+        <h2 class="auto-type"><span></span></h2>
+            <!-- i am a (student, designer, programmer, baker, traveler) -->
+            <script>
+                var typed = new Typed(".auto-type span", {
+                strings: [
+                    "I'm a /Designer.",
+                    "I'm a &lt;Software Engineer/&gt;.",
+                    "I'm a baker.",
+                ],
+                typeSpeed: 80,
+                backSpeed: 80,
+                loop: true,
+                });
+            </script>
+        <!-- </h2> -->
 
-        
-        <script>
-            var typed = new Typed(".auto-type", {
-            strings: [
-                "I'm a /Designer.",
-                "I'm a &lt;Software Engineer/&gt;.",
-                "I'm a baker.",
-            ],
-            typeSpeed: 80,
-            backSpeed: 80,
-            loop: true,
-            });
-        </script>
+        <p> I am a college student majoring in computer science. </p>
         
         <div id="sosmed-bar">
             <div class="s-icon">
