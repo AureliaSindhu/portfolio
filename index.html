@@ -9,7 +9,10 @@
     <!-- css + js -->
     <link rel = "stylesheet" href = "style.css">
     <link rel = "stylesheet" href = "script.js">
-    <!-- font -->
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/120a414748.js" crossorigin="anonymous"></script>
+    <!-- typewriter -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 
 <body>
@@ -20,7 +23,7 @@
     <div class = "navbar">
         <div class = "left-side">
             <img src = "pic/icon2.png"/ alt = "logo" width = "48px">
-            <h1> |  Aurelia S </h1>
+            <h1 style="font-weight: bold;"> | Aurelia S. </h1>
         </div>
         
         <div class = "right-side">
@@ -31,22 +34,55 @@
     </div>
 
     <section id = "about">
-        <h1> ##</h1>
+        <h2 class="auto-type"> ## </h2>
         <p> I am a college student majoring in computer science. </p>
         <!-- i am a (student, designer, programmer, baker, traveler) -->
+
+        
+        <script>
+            var typed = new Typed(".auto-type", {
+            strings: [
+                "I'm a /Designer.",
+                "I'm a &lt;Software Engineer/&gt;.",
+                "I'm a baker.",
+            ],
+            typeSpeed: 80,
+            backSpeed: 80,
+            loop: true,
+            });
+        </script>
+        
+        <div id="sosmed-bar">
+            <div class="s-icon">
+                <!-- linkedin, github, devpost, email -->
+                <a href="https://www.linkedin.com/in/aurelia-sindhunirmala-b14280216/" target="blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/AureliaSindhu" target="blank"><i class="fa fa-github"></i></a>
+                <a href="https://devpost.com/AureliaSindhu" target="blank"><i class="fa fa-devpost"></i></a>
+                <a href=mailto: aurelia.sindhu@gmail.com" target="blank"> <i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+        
     </section>
 
     <section id = "projects">
-        <h1> ## </h1>
+        <h2> ## </h2>
     </section>
 
     <section id = "resume">
-        <h1> ## </h1>
+        <h2> ## </h2>
     </section>
 
     <div class = "footer">
         <p> More Links </p>
-        <!-- socmed: linkedin, github, devpost -->
+        <!-- additional socmed: insta(dayswithlia), spotify, youtube  -->
+        <div id="sosmed-bar">
+            <div class="s-icon">
+                <a href="https://www.instagram.com/dayswithlia/" target="blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://open.spotify.com/user/aurelia.sindhu?si=39b75d9592ae4d3c" target="blank"><i class="fa fa-spotify"></i></a>
+                <a href="https://www.youtube.com/channel/UCb8ndl2PdjHTteVF-PLgK4w" target="blank"><i class="fa fa-youtube"></i></a>
+                <!-- <a href="https://github.com/AureliaSindhu" target="blank"> <i class="fa fa-github"></i></a> -->
+            </div>
+        </div>
     </div>
 
     <div class = "copyright">
