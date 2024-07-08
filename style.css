@@ -156,7 +156,7 @@ body {
     left: 0; /* Start the underline from the left edge of the link */
     width: 0; 
     height: 3px; 
-    background: var(--icon);
+    background: var(--text);
     transform: scaleX(0); 
     transform-origin: bottom right; 
     transition: transform 0.3s ease; 
@@ -169,7 +169,7 @@ body {
 }
 
 .right-side a:hover{
-    color: var(--icon);
+    color: var(--text);
 }
 
 /* devpost icon */
@@ -194,10 +194,10 @@ body {
     margin: 0 10px;
     transition: 0.2s linear;
     font-size: 40px;
-    color:var(--sec);
+    color:var(--icon);
 }
 
 .s-icon :hover i{
     transform: scale(1.3);
-    color:var(--icon);
+    color:var(--prim);
 }
