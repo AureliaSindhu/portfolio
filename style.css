@@ -104,10 +104,24 @@ body {
     font-family: var(--font);
 }
 
-#about, #projects, #resume, .footer, .copyright{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+::selection,
+a::selection,
+h1::selection,
+h2::selection,
+p::selection,
+.gradient-text::selection {
+    background: #ffc941ed;
+    z-index: 1;
+    color: var(--sec);
+}
+a:-webkit-any-link {
+    text-decoration: none;
+    transition: color 0.5s ease;
+    color: var(--text);
+}
+
+a:hover {
+    color: var(--sec);
 }
 
 /* navbar */
@@ -144,8 +158,6 @@ body {
 
 .right-side a {
     position: relative; 
-    text-decoration: none; 
-    color: var(--text); 
     margin: 0 10px; 
 }
 
@@ -153,7 +165,7 @@ body {
     content: ''; 
     position: absolute; 
     top: -4px; 
-    left: 0; /* Start the underline from the left edge of the link */
+    left: 0; 
     width: 0; 
     height: 3px; 
     background: var(--text);
@@ -169,7 +181,7 @@ body {
 }
 
 .right-side a:hover{
-    color: var(--text);
+    color: var(--icon);
 }
 
 /* devpost icon */
@@ -183,9 +195,60 @@ body {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    /* margin-bottom: -18px; */
 }
 
+#about, #projects, #funzies, .socials, .footer{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#about{
+    background-image: url('pic/kaomoji.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; 
+    width: 100%;
+    bottom: 0;
+    margin-top: 40px;
+    position: relative;
+}
+
+#techStack {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background: linear-gradient(var(--background) 25%, var(--ter) 100%);
+}
+
+.techCol {
+    flex: 1; 
+    text-align: left; 
+    padding-left: 50px;
+}
+
+.techCol h1{
+    font-size: 70px;
+}
+
+.techCol a{
+    font-size: 20px;
+}
+
+.techStackImg {
+    margin-left: auto; 
+}
+
+.techStackImg img {
+    max-width: 100%; 
+    height: auto;
+}
+
+#funzies{
+    background: linear-gradient(var(--ter) 0%, var(--background) 100%);
+}
+
+/* sosmed bar */
 #sosmed-bar{
     margin: 0px;
 }

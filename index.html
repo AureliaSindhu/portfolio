@@ -8,7 +8,7 @@
     <link rel = "icon" href = "pic/logo4.png"> 
     <!-- css + js -->
     <link rel = "stylesheet" href = "style.css">
-    <link rel = "stylesheet" href = "script.js">
+    <link rel = "script" href = "script.js">
     <!-- icons -->
     <script src="https://kit.fontawesome.com/120a414748.js" crossorigin="anonymous"></script>
     <!-- typewriter -->
@@ -19,22 +19,23 @@
     <!-- <div class = "header">
         <object type="text/html" data="attributes/heading.html"></object>
     </div> -->
-
     <div class = "navbar">
         <div class = "left-side">
             <!-- <img src = "pic/icon2.png"/ alt = "logo" width = "48px"> -->
-            <img src = "pic/logo4.png"/ alt = "logo" width = "48px">
+            <a href = "index.html"> 
+                <img src = "pic/logo4.png"/ alt = "logo" width = "48px"> 
+            </a>
             <!-- <h1 style="font-weight: bold;"> Aurelia Sindhu </h1> -->
         </div>
         
         <div class = "right-side">
-            <a href = "#about"> About Me </a>
-            <a href = "#projects"> Projects </a>
+            <a href = "about.html"> About Me </a>
+            <a href = "projects.html"> Projects </a>
             <a href = "#resume"> Resume </a>
         </div>
     </div>
 
-    <section id = "about">
+    <div id = "about">
         <h1 class="title"> Aurelia Sindhunirmala </h1>
         <h2 class="auto-type"><span></span></h2>
             <!-- i am a (student, designer, programmer, baker, traveler) -->
@@ -63,17 +64,20 @@
                 <a href=mailto: aurelia.sindhu@gmail.com" target="blank"> <i class="fa fa-envelope"></i></a>
             </div>
         </div>
-        
-    </section>
+    </div>
 
-    <section id = "techStack">
+    <div id = "techStack">
         <div class = "techCol">
             <h1> Tech Stack </h1>
-            <a href = "#"> details -> </a>
+            <a href = "#"> view more <i class="fa-solid fa-arrow-right"></i> </a>
         </div>
-    </section>
+        <div class = "techStackImg">
+            <!-- <img src="pic/techStack.png"> -->
+            <img src="pic/tech-stack.png">
+        </div>
+    </div>
 
-    <section id = "projects">
+    <div id = "projects" style="background-color: #282538;">
         <h2> Gallery </h2>
         <div class = "projCol">
             <div class = "prev1">
@@ -95,9 +99,12 @@
                 <p> Hacaktahon</p>
             </div>
         </div>
-    </section>
+        <div class = "projCol2">
+            <a href = "projects.html"> view more <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+    </div>
 
-    <section id = "resume">
+    <div id = "funzies">
         <div class = "fun1">
             <!-- painting, baking, digital art -->
         </div>
@@ -105,9 +112,9 @@
         <div class = "fun2">
             <!-- travel sports culinary -->
         </div>
-    </section>
+    </div>
 
-    <div class = "footer">
+    <div class = "socials">
         <p> connect with me on other platforms! </p>
         <!-- additional socmed: insta(dayswithlia), spotify, youtube  -->
         <div id="sosmed-bar">
@@ -120,7 +127,7 @@
         </div>
     </div>
 
-    <div class = "copyright">
+    <div class = "footer" style="background-color: #282538;">
         <!-- <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span> Aurelia Sindhunirmala</span> | all rights reserved</div> -->
         <div class="credit">&copy; <span id="currentYear"></span> by <span>Aurelia Sindhunirmala</span> | all rights reserved</div>
     </div>
