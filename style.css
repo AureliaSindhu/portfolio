@@ -83,7 +83,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* color: #000000; */
 }
 
 img {
@@ -95,6 +94,8 @@ html,
 body {
     overflow-x: hidden;
     background: var(--background);
+    /* background: #0E070E; */
+    /* background-color: var(--background); */
     color: var(--text);
     margin: 0;
     max-width: 100vw;
@@ -202,6 +203,7 @@ a:hover {
 }
 
 #about{
+    background: var(--background);
     background-image: url('pic/kaomoji.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -226,7 +228,7 @@ a:hover {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    background: linear-gradient(var(--background) 25%, var(--ter) 100%);
+    background: linear-gradient(var(--background) 0%, var(--ter) 100%);
 }
 
 .techCol {
@@ -343,8 +345,7 @@ a:hover {
     position: absolute;
     top: 20px;
     right: 0px;
-    background: var(--ter); /* semi-transparent background */
-    /* color: white; */
+    background: var(--ter);
     font-size: var(--subparagraph);
     padding: 5px 10px;
     border-radius: 5px 0px 0px 5px;
