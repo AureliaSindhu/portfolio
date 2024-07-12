@@ -1,4 +1,5 @@
 :root{
+    /* font */
     /* --font: "Santoshi", sans-serif; */
     --font: "General Sans", sans-serif;
     --secFont: "Boska", serif;
@@ -11,29 +12,11 @@
     --icon: #CDC2C0;
     --background: #0E070E;
 
-    /* border formatting */
-    --border: 3px solid var(--outline); /* border for large containers */
-    --cardBorder: 2px solid var(--cardBorderColor); /* border for cards and tags */
-    --containerBorderRadius: 12px;
-    --cardBorderRadius: 6px;
-    --borderHover: 3px solid var(--prim);
-
-    /* general spacing */
-    --smallGap: 8px; /* small gap */
-    --listGap: 18px; /* list of elements */
-    --containerGap: 28px; /* cards of elements */
-
-    /* text */
+    /* custom text size */
     --title: 48px;
     --heading: 28px;
     --subparagraph: 20px;
     --paragraphs: 18px;
-    --textColor: #ffffffc5;
-    --textGradient: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(153, 153, 153, 1) 100%
-    );
 }
 
 @font-face {
@@ -369,6 +352,13 @@ a:hover {
     z-index: 1;
 }
 
+.projCol2{
+    font-size: var(--paragraphs);
+    text-align: right;
+    margin-right: 90px;
+    margin-top: 20px;
+}
+
 /* funzies */
 #funzies{
     position: relative;
@@ -463,4 +453,22 @@ a:hover {
     -o-object-fit: cover;
     object-fit: cover;
     pointer-events: none;
+}
+
+/* collab + sosmed bar 2 */
+.collab p, .socials p{
+    font-size: var(--heading);
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.collab a{
+    font-size: var(--subparagraph);
+    background-color: var(--ter);
+    padding: 10px;
+    /* margin: 20px; */
+}
+
+.icon{
+    border-radius: 20px;
 }
