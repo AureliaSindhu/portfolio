@@ -1,6 +1,7 @@
 :root{
     /* --font: "Santoshi", sans-serif; */
     --font: "General Sans", sans-serif;
+    --secFont: "Boska", serif;
 
     /* colors */
     --prim: #75616A;
@@ -33,52 +34,66 @@
         rgba(255, 255, 255, 1) 0%,
         rgba(153, 153, 153, 1) 100%
     );
-
-    /* font */
-    /* font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Regular.otf") format("opentype"); */
 }
 
 @font-face {
     font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Regular.otf") format("opentype");
+    src: url("/font/OTF/GeneralSans-Regular.otf") format("opentype");
     font-weight: regular;
 }
 
 @font-face {
     font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Bold.otf") format("opentype");
+    src: url("/font/OTF/GeneralSans-Bold.otf") format("opentype");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Semibold.otf") format("opentype");
+    src: url("/font/OTF/GeneralSans-Semibold.otf") format("opentype");
     font-weight: semibold;
 }
 
 @font-face {
     font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Light.otf") format("opentype");
+    src: url("/font/OTF/GeneralSans-Light.otf") format("opentype");
     font-weight: light;
 }
 
 @font-face {
     font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Italic.otf") format("opentype");
+    src: url("/font/OTF/GeneralSans-Italic.otf") format("opentype");
     font-weight: italic;
 }
 
 @font-face {
     font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Light.otf") format("opentype");
+    src: url("/font/OTF/GeneralSans-Light.otf") format("opentype");
     font-weight: light;
 }
 
 @font-face {
     font-family: "General Sans";
-    src: url("/Users/acaebowl/Desktop/portfolio/font/OTF/GeneralSans-Medium.otf") format("opentype");
+    src: url("/font/OTF/GeneralSans-Medium.otf") format("opentype");
     font-weight: medium;
+}
+
+@font-face {
+    font-family: "Boska";
+    src: url("/font/Boska_Complete/Fonts/OTF/Boska-BlackItalic.otf") format("opentype");
+    font-weight: BlackItalic;
+}
+
+@font-face {
+    font-family: "Boska";
+    src: url("/font/Boska_Complete/Fonts/OTF/Boska-BoldItalic.otf") format("opentype");
+    font-weight: BoldItalic;
+}
+
+@font-face {
+    font-family: "Boska";
+    src: url("/font/Boska_Complete/Fonts/OTF/Boska-MediumItalic.otf") format("opentype");
+    font-weight: MediumItalic;
 }
 
 *{
@@ -238,7 +253,8 @@ a:hover {
 }
 
 .techCol h1{
-    font-size: 70px;
+    /* font-size: 70px; */
+    font-size: var(--title);
 }
 
 .techCol a{
@@ -252,10 +268,6 @@ a:hover {
 .techStackImg img {
     max-width: 100%; 
     height: auto;
-}
-
-#funzies{
-    background: linear-gradient(var(--ter) 0%, var(--background) 100%);
 }
 
 /* sosmed bar */
@@ -301,9 +313,21 @@ a:hover {
 }
 
 /* project gallery preview */
+#projects h1{
+    font-size: var(--title);
+    padding: 80px;
+    /* margin: 20px; */
+}
+
 .projCol{
     display: flex;
     justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+}
+
+.projCol img{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .prev1{
@@ -311,19 +335,38 @@ a:hover {
     background: linear-gradient(to right, var(--icon), var(--prim));
     padding: 4px;
     border-radius: 20px;
-    width: 27vw;
+    width: 25%;
     /* border: 3px solid var(--icon); */
 }
 
 .prevCont{
-    background-color: var(--sec); /* Inner content background */
-    border-radius: 16px; /* Inner content border radius */
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sec);
+    border-radius: 16px;
+    padding: 0px 10px;
+    padding-bottom: 30px;
+    position: relative;
+    min-height: 300px;
 }
-
 
 .projPic{
     border-radius: 18px;
+}
+
+.awards {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    background: var(--ter); /* semi-transparent background */
+    /* color: white; */
+    font-size: var(--subparagraph);
+    padding: 5px 10px;
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 /* funzies */
@@ -332,6 +375,13 @@ a:hover {
     z-index: 1;
     height: 100vh;
     overflow: hidden;
+    padding: 50px;
+    background: linear-gradient(var(--ter) 0%, var(--background) 100%);
+}
+
+#funzies h1{
+    font-size: var(--heading);
+    /* font-style: italic; */
 }
 
 .funItem{
