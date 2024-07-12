@@ -375,11 +375,11 @@ a:hover {
 }
 
 .funItem{
-    --items: 10;
+    --items: 5;
     --width: clamp(150px, 30vw, 300px);
     --height: clamp(200px, 40vw, 400px);
-    --x: calc(var(--active) * 800%);
-    --y: calc(var(--active) * 200%);
+    --x: calc(var(--active) * 200%);
+    --y: calc(var(--active) * 50%);
     --rot: calc(var(--active) * 120deg);
     --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
     overflow: hidden;
@@ -466,7 +466,9 @@ a:hover {
     font-size: var(--subparagraph);
     background-color: var(--ter);
     padding: 10px;
-    /* margin: 20px; */
+    margin: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
 }
 
 .icon{
