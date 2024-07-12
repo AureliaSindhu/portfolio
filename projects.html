@@ -31,4 +31,89 @@
             <a href = "#resume"> Resume </a>
         </div>
     </div>
+
+    <div class ="projectHome">
+        <h1> Project Gallery </h1>
+        <h2> Latest <span class="auto-type"></span> Endeavors</h2>
+
+        <script>
+            var typed = new Typed(".auto-type", {
+            strings: [
+                "creative",
+                "innovative",
+                "unique",
+            ],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 1000,
+            startDelay: 500,
+            loop: true,
+            });
+        </script>
+
+        <div class ="view-opt">
+            <a href = ".projects"> show all </a>
+            <div class ="dropdown">
+                <button onclick="myFunction()" class="dropbtn">search by category</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
+                    <!-- <button class="btn" onclick="filterSelection('ideation')">Product Ideation</button>  -->
+                    <!-- <button class="btn" onclick="filterSelection('web')">Web Development</button> -->
+                    <!-- <button class="btn" onclick="filterSelection('ds')">Data Science and Machine Learning</button> -->
+                    <!-- <button class="btn" onclick="filterSelection('game')">Game Development</button> -->
+                    <a href="#">Product Ideation</a>
+                    <a href="#">Web Development</a>
+                    <a href="#">Game Development</a>
+                    <a href="#">Data Science and Machine Learning </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class ="projects">
+        <div class = "projCol">
+            <div class = "prev1">
+                <div class ="prevCont">
+                    <div class = "awards">
+                        <p> 🏆 Best Startup</p>
+                    </div>
+                    <div class ="projPic">
+                        <img src = "pic/nagaguard.png">
+                    </div>
+                    <div class="projDesc">
+                        <h2> NagaGuard </h2>
+                        <p> Clinical coding in your assitance! </p>
+                    </div>
+                </div>
+            </div>
+            <div class = "prev1">
+                <div class ="prevCont">
+                    <div class = "awards">
+                        <p> 🏆 Best Runner up</p>
+                    </div>
+                    <div class ="projPic">
+                        <img src = "pic/bobabae.png">
+                    </div>
+                    <div class="projDesc">
+                        <h2> Bobabae </h2>
+                        <p> Find your perfect bobabae! </p>
+                    </div>
+                </div>
+            </div>
+            <div class = "prev1">
+                <div class ="prevCont">
+                    <div class = "awards">
+                        <p> 👤 20k+ users </p>
+                    </div>
+                    <div class ="projPic">
+                        <img src = "pic/toastology.png">
+                    </div>
+                    <div class="projDesc">
+                        <h2> Toastology </h2>
+                        <p> Find out which toast you are! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
