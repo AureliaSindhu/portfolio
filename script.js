@@ -70,3 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('touchmove', handleMouseMove);
     document.addEventListener('touchend', handleMouseUp);
 });
+
+// Project -- filter
+function filterSelection(category) {
+    // Get all project columns
+    var columns = document.querySelectorAll('.column');
+    // Loop through the columns and display the ones that match the selected category
+    columns.forEach(function (column) {
+        if (category === 'all' || column.classList.contains(category)) {
+            column.style.display = 'block'; // Show the column
+        } else {
+            column.style.display = 'none'; // Hide the column
+        }
+    });
+}
+
+// Call filterSelection('all') to show all items by default
+filterSelection('all');
