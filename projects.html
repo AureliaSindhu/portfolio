@@ -52,29 +52,16 @@
         </script>
 
         <div class ="view-opt">
-            <a href = ".projects"> show all </a>
-            <div class ="dropdown">
-                <!-- <button onclick="myFunction()" class="dropbtn">search by category <i class="fa-solid fa-arrow-down"></i> </button> -->
-                <div id="myDropdown" class="dropdown-content">
-                    <!-- <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
-                    <!-- <button class="btn" onclick="filterSelection('ideation')">Product Ideation</button>  -->
-                    <!-- <button class="btn" onclick="filterSelection('web')">Web Development</button> -->
-                    <!-- <button class="btn" onclick="filterSelection('ds')">Data Science and Machine Learning</button> -->
-                    <!-- <button class="btn" onclick="filterSelection('game')">Game Development</button> -->
-                    <!-- <a href="#">Product Ideation</a>
-                    <a href="#">Web Development</a>
-                    <a href="#">Game Development</a>
-                    <a href="#">Data Science and Machine Learning </a> -->
+            <!-- <a href = ".projects"> show all </a> -->
+            <a href="#" onclick="filterSelection('all')">Show All</a>
 
-                    <!-- <label for="categoryFilter">Filter by:</label> -->
             <select id="categoryFilter" onchange="filterSelection(this.value)">
-                <!-- <option value="all" selected>Show all</option> -->
+                <option value="">Filter by Category</option>
                 <option value="ideation">Product Ideation and Design</option>
                 <option value="game">Game Development</option>
                 <option value="analysis">Data Analysis</option>
-            </select>
-                </div>
-            </div>
+            </select> 
+
         </div>
     </div>
 

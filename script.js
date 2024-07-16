@@ -72,18 +72,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Project -- filter
+function toggleDropdown() {
+    document.getElementById("categoryDropdown").classList.toggle("show");
+}
+
 function filterSelection(category) {
-    // Get all project columns
     var columns = document.querySelectorAll('.column');
-    // Loop through the columns and display the ones that match the selected category
     columns.forEach(function (column) {
         if (category === 'all' || column.classList.contains(category)) {
-            column.style.display = 'block'; // Show the column
+            column.style.display = 'block';
         } else {
-            column.style.display = 'none'; // Hide the column
+            column.style.display = 'none';
         }
     });
 }
 
 // Call filterSelection('all') to show all items by default
-filterSelection('all');
+document.addEventListener('DOMContentLoaded', () => {
+    filterSelection('all');
+});
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.querySelectorAll(".dropdown-content");
+        dropdowns.forEach(function(dropdown) {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    }
+};

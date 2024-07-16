@@ -469,3 +469,18 @@ a:hover {
 .icon{
     border-radius: 20px;
 }
+
+/* Styles for the dropdown menu */
+#categoryFilter {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.view-opt a {
+    margin-right: 15px;
+    text-decoration: none;
+    /* color: #4CAF50; */
+    font-weight: bold;
+}
