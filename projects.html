@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Lia's Portfolio </title>
+    <title>Lia's Portfolio</title>
 
     <!-- icon -->
-    <link rel = "icon" href = "pic/logo4.png"> 
+    <link rel="icon" href="pic/logo4.png"> 
     <!-- css + js -->
-    <link rel = "stylesheet" href = "style.css">
-    <script src = "script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Ensure script.js is loaded after DOM content -->
     <!-- icons -->
     <script src="https://kit.fontawesome.com/120a414748.js" crossorigin="anonymous"></script>
     <!-- typewriter -->
@@ -16,102 +17,94 @@
 </head>
 
 <body>
-    <div class = "navbar">
-        <div class = "left-side">
-            <!-- <img src = "pic/icon2.png"/ alt = "logo" width = "48px"> -->
-            <a href = "index.html"> 
-                <img src = "pic/logo4.png"/ alt = "logo" width = "48px"> 
+    <div class="navbar">
+        <div class="left-side">
+            <a href="index.html"> 
+                <img src="pic/logo4.png" alt="logo" width="48px"> 
             </a>
-            <!-- <h1 style="font-weight: bold;"> Aurelia Sindhu </h1> -->
         </div>
-        
-        <div class = "right-side">
-            <a href = "about.html"> About Me </a>
-            <a href = "projects.html"> Projects </a>
-            <a href = "#resume"> Resume </a>
+        <div class="right-side">
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="#resume">Resume</a>
         </div>
     </div>
 
-    <div class ="projectHome">
-        <h1> Project Gallery </h1>
-        <h2> Latest <span class="auto-type"></span> Endeavors</h2>
+    <div class="projectHome">
+        <h1>Project Gallery</h1>
+        <h2>Latest <span class="auto-type"></span> Endeavors</h2>
 
         <script>
             var typed = new Typed(".auto-type", {
-            strings: [
-                "creative",
-                "innovative",
-                "unique",
-            ],
-            typeSpeed: 80,
-            backSpeed: 80,
-            backDelay: 1000,
-            startDelay: 500,
-            loop: true,
+                strings: ["creative", "innovative", "unique"],
+                typeSpeed: 80,
+                backSpeed: 80,
+                backDelay: 1000,
+                startDelay: 500,
+                loop: true,
             });
         </script>
 
-        <div class ="view-opt">
-            <!-- <a href = ".projects"> show all </a> -->
-            <a href="#" onclick="filterSelection('all')">Show All</a>
+        <div class="view-opt">
+            <a href="#" onclick="filterSelection('')">Show All</a>
 
-            <select id="categoryFilter" onchange="filterSelection(this.value)">
-                <option value="">Filter by Category</option>
-                <option value="ideation">Product Ideation and Design</option>
-                <option value="game">Game Development</option>
-                <option value="analysis">Data Analysis</option>
-            </select> 
-
+            <div class="custom-dropdown">
+                <button onclick="toggleDropdown()" class="dropbtn">Filter by Category <i class="fa-solid fa-arrow-down"></i></button>
+                <div id="categoryDropdown" class="dropdown-content">
+                    <a href="#" onclick="filterSelection('')">Filter by Category</a>
+                    <a href="#" onclick="filterSelection('ideation')">Product Ideation and Design</a>
+                    <a href="#" onclick="filterSelection('game')">Game Development</a>
+                    <a href="#" onclick="filterSelection('analysis')">Data Analysis</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class ="projects">
-        <div class = "projCol">
-            <!-- <div class = "prev1"> -->
-            <div class ="column ideation">
-                <div class ="prevCont">
-                    <div class = "awards">
+    <div class="projects">
+        <div class="projCol">
+            <div class="column ideation">
+                <div class="prevCont">
+                    <div class="awards">
                         <p> 🏆 Best Startup</p>
                     </div>
-                    <div class ="projPic">
-                        <img src = "pic/nagaguard.png">
+                    <div class="projPic">
+                        <img src="pic/nagaguard.png" alt="NagaGuard">
                     </div>
                     <div class="projDesc">
-                        <h2> NagaGuard </h2>
-                        <p> Clinical coding in your assitance! </p>
+                        <h2>NagaGuard</h2>
+                        <p>Clinical coding in your assistance!</p>
                     </div>
                 </div>
             </div>
-            <!-- <div class = "prev1"> -->
-            <div class ="column game">
-                <div class ="prevCont">
-                    <div class = "awards">
-                        <p> 🏆 Best Runner up</p>
+            <div class="column game">
+                <div class="prevCont">
+                    <div class="awards">
+                        <p> 🏆 Best Runner Up</p>
                     </div>
-                    <div class ="projPic">
-                        <img src = "pic/bobabae.png">
+                    <div class="projPic">
+                        <img src="pic/bobabae.png" alt="Bobabae">
                     </div>
                     <div class="projDesc">
-                        <h2> Bobabae </h2>
-                        <p> Find your perfect bobabae! </p>
+                        <h2>Bobabae</h2>
+                        <p>Find your perfect bobabae!</p>
                     </div>
                 </div>
             </div>
-            <!-- <div class = "prev1"> -->
-            <div class ="column game">
-                <div class ="prevCont">
-                    <div class = "awards">
-                        <p> 👤 20k+ users </p>
+            <div class="column game">
+                <div class="prevCont">
+                    <div class="awards">
+                        <p> 👤 20k+ users</p>
                     </div>
-                    <div class ="projPic">
-                        <img src = "pic/toastology.png">
+                    <div class="projPic">
+                        <img src="pic/toastology.png" alt="Toastology">
                     </div>
                     <div class="projDesc">
-                        <h2> Toastology </h2>
-                        <p> Find out which toast you are! </p>
+                        <h2>Toastology</h2>
+                        <p>Find out which toast you are!</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+</html>

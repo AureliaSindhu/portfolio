@@ -72,14 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Project -- filter
-function toggleDropdown() {
-    document.getElementById("categoryDropdown").classList.toggle("show");
-}
-
 function filterSelection(category) {
     var columns = document.querySelectorAll('.column');
     columns.forEach(function (column) {
-        if (category === 'all' || column.classList.contains(category)) {
+        if (category === '' || category === 'all' || column.classList.contains(category)) {
             column.style.display = 'block';
         } else {
             column.style.display = 'none';
@@ -87,11 +83,22 @@ function filterSelection(category) {
     });
 }
 
-// Call filterSelection('all') to show all items by default
+// Call filterSelection('') to show all items by default
 document.addEventListener('DOMContentLoaded', () => {
-    filterSelection('all');
+    filterSelection(''); // Show all items by default
 });
 
+// Event listener for category filter
+document.getElementById('categoryFilter').addEventListener('change', function() {
+    filterSelection(this.value);
+});
+
+// Toggle the dropdown menu
+function toggleDropdown() {
+    document.getElementById("categoryDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.querySelectorAll(".dropdown-content");
