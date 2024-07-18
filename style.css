@@ -522,6 +522,53 @@ a:hover {
 }
 
 /* projects page */
-.projects .projCol{
-    flex-wrap: wrap;
+
+
+.projects {
+    padding: 20px;
+    margin: 40px;
+}
+
+.projCol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 2 equal-width columns */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Optional: Define styles for the project items */
+.column {
+    background: var(--sec); /* Background color for the project items */
+    border-radius: 10px; /* Rounded corners for the items */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the items */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.column:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+}
+
+.prevCont {
+    display: flex;
+    flex-direction: column;
+}
+
+.projPic img {
+    width: 100%; /* Make the image fill the column */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.projDesc {
+    padding: 15px;
+}
+
+.awards p {
+    font-size: 1.2em;
+}
+
+/* Optional: Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .projCol {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
 }
