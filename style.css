@@ -292,6 +292,11 @@ a:hover {
 }
 
 /* project gallery preview */
+#projects{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
 #projects h1{
     font-size: var(--title);
     padding: 80px;
@@ -299,8 +304,8 @@ a:hover {
 }
 
 .projCol{
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex; */
+    /* justify-content: space-around; */
     /* flex-wrap: wrap; */
 }
 
@@ -314,7 +319,7 @@ a:hover {
     background: linear-gradient(to right, var(--icon), var(--prim));
     padding: 4px;
     border-radius: 20px;
-    width: 25%;
+    /* width: fit-content; */
     /* border: 3px solid var(--icon); */
 }
 
