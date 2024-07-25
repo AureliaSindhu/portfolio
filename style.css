@@ -593,3 +593,17 @@ a:hover {
         grid-template-columns: 1fr; /* Single column layout on smaller screens */
     }
 }
+
+.tags a{
+    display: inline-flex;
+    border-radius: 6px;
+    border: 3px solid var(--icon);
+    color: var(--icon);
+    padding: 10px;
+    margin: 5px;
+}
+
+.tags a:hover{
+    border-color: var(--prim);
+    color: var(--prim);
+}
