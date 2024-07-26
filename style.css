@@ -95,6 +95,7 @@ body {
     max-width: 100vw;
     width: 100vw;
     font-family: var(--font);
+    scroll-behavior: smooth;
 }
 
 ::selection,
@@ -525,7 +526,7 @@ a:hover {
 }
 
 /* projects page */
-.projects {
+.projects, .aboutSec {
     padding: 40px;
     margin: 40px;
 }
@@ -606,4 +607,10 @@ a:hover {
 .tags a:hover{
     border-color: var(--prim);
     color: var(--prim);
+}
+
+/* about me page */
+.intro{
+    display: inline-flex;
+    justify-content: space-between;
 }

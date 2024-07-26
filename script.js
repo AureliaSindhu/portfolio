@@ -2,7 +2,7 @@ function showAlert() {
     alert ("Hi There! Please open this web using desktop size or larger device since I am still trying to make it more responsive. Thanks you so much!");
 }
 
-
+// funzies
 document.addEventListener('DOMContentLoaded', () => {
     let progress = 50;
     let startX = 0;
@@ -109,3 +109,25 @@ window.onclick = function(event) {
         });
     }
 };
+
+// sooth scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+    anchorLinks.forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            // Calculate offset position
+            const offsetPosition = targetElement.offsetTop - document.querySelector('.navbar').offsetHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
