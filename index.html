@@ -116,7 +116,18 @@
     </div>
 
     <div id = "projects" style="background-color: #282538;">
-        <h1> Latest Creative <span> Endeavors </span> </h1>
+        <!-- <h1> Latest Creative <span> Endeavors </span> </h1> -->
+        <h1>Latest <span class="projectTtl"></span> Endeavors</h1>
+        <script>
+            var typed = new Typed(".projectTtl", {
+                strings: ["creative", "innovative", "unique"],
+                typeSpeed: 80,
+                backSpeed: 80,
+                backDelay: 1000,
+                startDelay: 500,
+                loop: true,
+            });
+        </script>
         <!-- <p> recent development products</p> -->
         <div class = "projCol">
             <div class="column development">
@@ -251,28 +262,31 @@
         </div> -->
     </div>
 
-    <div class = "collab">
-        <p> Interested to  collaborate together? </p>
-        <a href = "#"> contact me </a>
-    </div>
-    <div class = "socials">
-        <p> connect with me on other platforms! </p>
-        <div id="sosmed-bar2">
-            <div class="s-icon">
-                <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
-                    <a href="https://www.instagram.com/dayswithlia/" target="blank"><i class="fa fa-instagram"></i></a>
-                </div>
-                
-                <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
-                    <a href="https://open.spotify.com/user/aurelia.sindhu?si=39b75d9592ae4d3c" target="blank"><i class="fa fa-spotify"></i></a>
-                </div>
-
-                <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
-                    <a href="https://www.youtube.com/channel/UCb8ndl2PdjHTteVF-PLgK4w" target="blank"><i class="fa fa-youtube"></i></a>
+    <div class="connect">
+        <div class = "collab">
+            <p> Interested to  collaborate together? </p>
+            <a href = "#"> contact me </a>
+        </div>
+        <div class = "socials">
+            <p> connect with me on other platforms! </p>
+            <div id="sosmed-bar2">
+                <div class="s-icon">
+                    <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
+                        <a href="https://www.instagram.com/dayswithlia/" target="blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                    
+                    <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
+                        <a href="https://open.spotify.com/user/aurelia.sindhu?si=39b75d9592ae4d3c" target="blank"><i class="fa fa-spotify"></i></a>
+                    </div>
+    
+                    <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
+                        <a href="https://www.youtube.com/channel/UCb8ndl2PdjHTteVF-PLgK4w" target="blank"><i class="fa fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div class = "footer" style="background-color: #282538; padding: 15px">
         <!-- <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span> Aurelia Sindhunirmala</span> | all rights reserved</div> -->
@@ -318,18 +332,13 @@
             duration: 100
         });
 
-        ScrollReveal().reveal('.collab', { 
+        ScrollReveal().reveal('.connect', { 
             delay: 1400,
             origin: 'bottom'
         });
 
-        ScrollReveal().reveal('.socials', { 
-            delay: 1600,
-            origin: 'right'
-        });
-
         ScrollReveal().reveal('.footer', { 
-            delay: 1800,
+            delay: 1600,
             origin: 'bottom'
         });
     });

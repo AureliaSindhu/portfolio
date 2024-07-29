@@ -306,6 +306,8 @@ a:hover {
     /* margin: 20px; */
 }
 
+
+
 /* .projCol{ */
     /* display: flex; */
     /* justify-content: space-around; */
@@ -459,11 +461,18 @@ a:hover {
     pointer-events: none;
 }
 
-/* collab + sosmed bar 2 */
+/* connect: collab + sosmed bar 2 */
+.connect{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 50px;
+}
+
 .collab p, .socials p{
     font-size: var(--heading);
     font-weight: bold;
-    margin-top: 50px;
 }
 
 .collab a{
@@ -549,7 +558,7 @@ a:hover {
     margin: 10px;
 }
 
-.projectHome h2 span{
+.projectHome h2 span, #projects span{
     font-family: var(--secFont);
     font-style: italic;
 }
