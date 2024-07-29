@@ -306,8 +306,6 @@ a:hover {
     /* margin: 20px; */
 }
 
-
-
 /* .projCol{ */
     /* display: flex; */
     /* justify-content: space-around; */
@@ -374,7 +372,7 @@ a:hover {
 }
 
 #funzies h1{
-    font-size: var(--heading);
+    font-size: var(--title);
     font-style: italic;
     margin-bottom: 20px;
 }
@@ -558,7 +556,7 @@ a:hover {
     margin: 10px;
 }
 
-.projectHome h2 span, #projects span{
+.projectHome h2 span, #projects span, #funzies h1{
     font-family: var(--secFont);
     font-style: italic;
 }
