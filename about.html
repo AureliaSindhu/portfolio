@@ -1,55 +1,202 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Lia's Portfolio </title>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Lia's Portfolio </title>
 
-    <!-- icon -->
-    <link rel = "icon" href = "pic/logo4.png"> 
-    <!-- css + js -->
-    <link rel = "stylesheet" href = "style.css">
-    <script src = "script.js"></script>
-    <!-- icons -->
-    <script src="https://kit.fontawesome.com/120a414748.js" crossorigin="anonymous"></script>
-    <!-- typewriter -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-</head>
+        <!-- icon -->
+        <link rel = "icon" href = "pic/logo4.png"> 
+        <!-- css + js -->
+        <link rel = "stylesheet" href = "style.css">
+        <script src = "script.js"></script>
+        <!-- icons -->
+        <script src="https://kit.fontawesome.com/120a414748.js" crossorigin="anonymous"></script>
+        <!-- typewriter -->
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- ScrollReveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
 
-<body>
-    <div class = "navbar">
-        <div class = "left-side">
-            <!-- <img src = "pic/icon2.png"/ alt = "logo" width = "48px"> -->
-            <a href = "index.html"> 
-                <img src = "pic/logo4.png"/ alt = "logo" width = "48px"> 
-            </a>
-            <!-- <h1 style="font-weight: bold;"> Aurelia Sindhu </h1> -->
-        </div>
-        
-        <div class = "right-side">
-            <a href = "about.html"> About Me </a>
-            <a href = "projects.html"> Projects </a>
-            <a href = "#resume"> Resume </a>
-        </div>
-    </div>
-
-    <div class="aboutSec">
-        <h1 class="name"> Aurelia Sindhunirmala </h1>
-        <div class="intro">
-            <img src="pic/me.png" class="me" alt="me"/>
-            <p class="desc"> Highly motivated college student with a strong passion for the ever-evolving tech industry. I'm actively seeking opportunities to learn, grow, and contribute my skills in a dynamic tech environment. Eager to leverage my frontend and backend skills to contribute to innovative projects and make a positive impact. I am open to any opportunities to widen my connections and explore new things.   </p>
-        </div>
-
-        <div class="recently">
-            <h1> Recently </h1>
-            <div class="notifBar">
-                <h3> title </h3>
-                <p> time </p>
-                <p> descriptiom</p>
+    <body>
+        <div class = "navbar">
+            <div class = "left-side">
+                <!-- <img src = "pic/icon2.png"/ alt = "logo" width = "48px"> -->
+                <a href = "index.html"> 
+                    <img src = "pic/logo4.png"/ alt = "logo" width = "48px"> 
+                </a>
+                <!-- <h1 style="font-weight: bold;"> Aurelia Sindhu </h1> -->
+            </div>
+            
+            <div class = "right-side">
+                <a href = "about.html"> About Me </a>
+                <a href = "projects.html"> Projects </a>
+                <a href = "#resume"> Resume </a>
             </div>
         </div>
 
-        <div class="folder">
-            
+        <div class="aboutSec">
+            <h1 class="name"> <i class="fa-regular fa-heart"></i> Aurelia Sindhunirmala </h1>
+            <div class="intro">
+                <img src="pic/me.png" class="me" alt="me"/>
+                <div class="desc-container">
+                    <div class="bio"> 
+                        <p> <i class="fa-solid fa-location-pin"></i>  Cali, Jkt </p>
+                        <p> <i class="fa-solid fa-user-graduate"></i>  Computer Science Major </p>
+                        <!-- <br> -->
+                        <hr style="margin: 20px 0 20px 0;"> 
+                    </div>
+                    <p class="desc"> Highly motivated college student with a strong passion for the ever-evolving tech industry. I'm actively seeking opportunities to learn, grow, and contribute my skills in a dynamic tech environment. Eager to leverage my frontend and backend skills to contribute to innovative projects and make a positive impact. I am open to any opportunities to widen my connections and explore new things.</p>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill">
+                            <p>FRONT-END: HTML, CSS, React</p>
+                            <div class="progress-bar" data-progress="90%"></div>
+                        </div>
+                        <div class="skill">
+                            <p>BACK-END: JavaScript, PHP, C++</p>
+                            <div class="progress-bar" data-progress="80%"></div>
+                        </div>
+                        <div class="skill">
+                            <p>DESIGN</p>
+                            <div class="progress-bar" data-progress="80%"></div>
+                        </div>
+                        <!-- <div class="skill">
+                            <p>React</p>
+                            <div class="progress-bar" data-progress="70%"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Node.js</p>
+                            <div class="progress-bar" data-progress="65%"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // progress bar
+                document.addEventListener('DOMContentLoaded', function() {
+                    const progressBars = document.querySelectorAll('.progress-bar');
+                    
+                    progressBars.forEach(bar => {
+                        const progress = bar.getAttribute('data-progress');
+                        bar.style.width = progress; // Set the width directly
+                    });
+                });
+            </script>
+
+            <div class="recently">
+                <h1> recently... </h1>
+                <div class="notifBar">
+                    <img src="pic/healthdiabet.png" class="appPic"/> 
+                    <div class="content">
+                        <div class="top">
+                            <div class="title-time">
+                                <h3> Summer Research </h3>
+                                <p class="time"> 2 weeks ago </p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="description"> Delving into clasifying and work on machine learning</p>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7219544139388870657/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7219544139388870657%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29" target="_blank"> show more</a>
+                        </div> 
+                    </div>              
+                </div>
+
+                <div class="notifBar">
+                    <img src="pic/legalease.png" class="appPic"/> 
+                    <div class="content">
+                        <div class="top">
+                            <div class="title-time">
+                                <h3> UC Berkeley AI Hackathon - SUM 24 </h3>
+                                <p class="time"> a month ago </p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="description"> Spending my summer by attending the largest AI Hackathon</p>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7211876627587248128/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7211876627587248128%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29" target="_blank"> show more</a>
+                        </div> 
+                    </div>              
+                </div>
+
+                <div class="notifBar">
+                    <img src="pic/toastology.png" class="appPic"/> 
+                    <div class="content">
+                        <div class="top">
+                            <div class="title-time">
+                                <h3> Find out which TOAST you are! </h3>
+                                <p class="time"> 4 months ago </p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p class="description"> A personal toast that match your personality</p>
+                            <a href="https://bit.ly/toastology" target="_blank"> show more</a>
+                        </div> 
+                    </div>              
+                </div>
+            </div>
+
+            <div class="folder">
+                <h1>library</h1>
+                <div class="openFolder">
+                    
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+
+        <div class = "footer" style="background-color: #282538; padding: 15px">
+            <!-- <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span> Aurelia Sindhunirmala</span> | all rights reserved</div> -->
+            <div class="credit">&copy; <span id="currentYear"></span> by <span>Aurelia Sindhunirmala</span> | All Rights Reserved</div>
+        </div>
+
+        <script>
+            ScrollReveal({
+                reset: false,
+                duration: 1400,
+            });
+
+            // General reveal settings
+            // ScrollReveal().reveal('.navbar', { 
+            //     delay: 200,
+            //     origin: 'top', 
+            //     distance: '50px',
+            //     opacity: 0.5 
+            // });
+
+            ScrollReveal().reveal('.aboutSec .name', { 
+                delay: 400,
+                origin: 'left', 
+                distance: '50px',
+                opacity: 0 
+            });
+
+            ScrollReveal().reveal('.aboutSec .intro', { 
+                delay: 600,
+                origin: 'bottom', 
+                distance: '50px',
+                opacity: 0 
+            });
+
+            ScrollReveal().reveal('.aboutSec .recently', { 
+                delay: 800,
+                origin: 'right', 
+                distance: '50px',
+                opacity: 0 
+            });
+
+            ScrollReveal().reveal('.aboutSec .folder', { 
+                delay: 1000,
+                origin: 'bottom', 
+                distance: '50px',
+                opacity: 0 
+            });
+
+            ScrollReveal().reveal('.footer', { 
+                delay: 1200,
+                origin: 'bottom'
+            });
+    </script>
+    </body>
+</html>

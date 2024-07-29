@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,10 @@
     <script src="https://kit.fontawesome.com/120a414748.js" crossorigin="anonymous"></script>
     <!-- typewriter -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal" defer></script>
 </head>
 
 <body onload="showAlert()">
@@ -172,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <div class = "projCol2">
+        <div class = "projCol2" style="background-color: #282538;">
             <a href = "projects.html"> view more <i class="fa-solid fa-arrow-right"></i> </a>
         </div>
     </div>
@@ -208,7 +213,7 @@
         <div class = "funItem">
             <div class = "funBox">
                 <div class="title"> Traveling </div>
-                <div class="num"> 03 </div>
+                <div class="num"> 04 </div>
             </div>
             <img src="pic/travel.png">
         </div>
@@ -216,9 +221,9 @@
         <div class = "funItem">
             <div class = "funBox">
                 <div class="title"> Sports </div>
-                <div class="num"> 04 </div>
+                <div class="num"> 05 </div>
             </div>
-            <img src="pic/sport.png">
+            <img src="pic/sport.jpeg">
         </div>
 
         <!-- <div class = "funItem">
@@ -273,9 +278,61 @@
         <!-- <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span> Aurelia Sindhunirmala</span> | all rights reserved</div> -->
         <div class="credit">&copy; <span id="currentYear"></span> by <span>Aurelia Sindhunirmala</span> | All Rights Reserved</div>
     </div>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', function() {
+        ScrollReveal({
+            reset: false, 
+            duration: 1000, 
+            easing: 'ease-in-out', 
+            distance: '50px', 
+            opacity: 0, 
+        });
+
+        ScrollReveal().reveal('#about .title', { 
+            delay: 400,
+            origin: 'bottom'
+        });
+
+        ScrollReveal().reveal('#about .auto-type', { 
+            delay: 600,
+            origin: 'bottom'
+        });
+
+        ScrollReveal().reveal('#techStack', { 
+            delay: 800,
+            origin: 'bottom'
+        });
+
+        ScrollReveal().reveal('#projects', { 
+            delay: 800,
+            origin: 'top',
+            duration: 100
+        });
+
+        ScrollReveal().reveal('#funzies', { 
+            delay: 800,
+            origin: 'top',
+            duration: 100
+        });
+
+        ScrollReveal().reveal('.collab', { 
+            delay: 1400,
+            origin: 'bottom'
+        });
+
+        ScrollReveal().reveal('.socials', { 
+            delay: 1600,
+            origin: 'right'
+        });
+
+        ScrollReveal().reveal('.footer', { 
+            delay: 1800,
+            origin: 'bottom'
+        });
+    });
+    </script>
 </body>
 </html>
-
-<script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-</script>
