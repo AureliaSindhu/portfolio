@@ -139,11 +139,30 @@
             </div>
 
             <div class="folder">
-                <h1>library</h1>
-                <div class="openFolder">
-                    
+                <h1>Library</h1>
+                <div class="openFolder" onclick="togglePopup()">
+                    <img src="pic/folder.png" alt="Folder Icon" class="folder-icon"/>
                 </div>
             </div>
+            
+            <!-- Popup for Poster -->
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="togglePopup()">&times;</span>
+                    <img src="pic/folder.png alt="Poster Image" class="poster"/>
+                </div>
+            </div>
+
+            <script>
+                function togglePopup() {
+                    const popup = document.getElementById('popup');
+                    if (popup.style.display === 'flex') {
+                        popup.style.display = 'none';
+                    } else {
+                        popup.style.display = 'flex';
+                    }
+                }
+            </script>
         </div>
 
         <div class = "footer" style="background-color: #282538; padding: 15px">
