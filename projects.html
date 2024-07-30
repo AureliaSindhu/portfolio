@@ -262,6 +262,14 @@
         </div>
     </div>
 
+    <div class = "collab">
+        <!-- <p> Interested to </p>
+        <p> <span class="tgt""> collaborate </span> </p>
+        <p> together ?</p> -->
+        <p> Interested to <span class="tgt""> collaborate </span> together ?</p>
+        <a href = "mailto:aurelia.sindhu@gmail.com"> contact me </a>
+    </div>
+
         <div class = "footer" style="background-color: #282538; padding: 15px">
             <!-- <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span> Aurelia Sindhunirmala</span> | all rights reserved</div> -->
             <div class="credit">&copy; <span id="currentYear"></span> by <span>Aurelia Sindhunirmala</span> | All Rights Reserved</div>
@@ -271,7 +279,7 @@
         // ScrollReveal animations
         ScrollReveal({
             reset: false,  
-            duration: 1200,
+            duration: 1000,
         });
 
         // General reveal settings
@@ -318,8 +326,13 @@
             interval: 100 
         });
 
+        ScrollReveal().reveal('.collab', { 
+            delay: 1400,
+            origin: 'bottom'
+        }); 
+
         ScrollReveal().reveal('.footer', { 
-            delay: 1000,
+            delay: 1600,
             origin: 'bottom'
         });
     </script>

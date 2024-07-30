@@ -278,7 +278,6 @@ a:hover {
 } */
 
 
-
 .icon{
     display: inline-flex;
     justify-content: space-evenly;
@@ -287,7 +286,7 @@ a:hover {
 }
 
 #sosmed-bar2{
-    margin: 20px;
+    /* margin: 20px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -470,7 +469,7 @@ a:hover {
     margin: 40px 50px;
 } */
 
-.connect, .collab, .socials{
+.connect, .collab{
     margin: 40px;
 }
 
@@ -491,11 +490,17 @@ a:hover {
     margin: 10px 20px;
     display: inline-block;
     border-radius: 10px;
+
+    border: 2px solid var(--icon);
+    color: var(--icon);
+    box-shadow: 0 0 5px var(--icon); 
+    transition: box-shadow 0.3s ease; 
 }
 
 .collab a:hover{
     color: var(--text);
     background-color: var(--sec);
+    border: 2px solid var(--prim);
     box-shadow: 0 0 10px var(--ter);
 }
 
@@ -503,17 +508,30 @@ a:hover {
     border-radius: 20px;
 }
 
-.s-icon2 a{
-    margin: 0 10px;
+.socials{
+    margin: 0 5px;
     transition: 0.2s linear;
-    font-size: 30px;
-    background-color: var(--sec);
-    padding: 10px 30px;
+    color: var(--icon);
+    padding: 10px;
     border-radius: 10px;
+    border: 3px solid var(--icon);
+    box-shadow: 0 0 10px var(--icon); 
+    transition: box-shadow 0.3s ease; 
 }
 
-.s-icon i:hover{
-    color: var(--icon);
+.socials p{
+    font-size: var(--subparagraph);
+    font-family: var(--secFont);
+    font-style: italic;
+}
+
+.s-icon2 a{
+    font-size: 40px;
+    color: var(--icon)
+}
+
+.s-icon2 i:hover{
+    color: var(--prim);
 }
 
 /* Container for the custom dropdown */

@@ -213,8 +213,26 @@
                         popup.classList.add('active');
                     }
                 }
-            </script>            
+            </script>    
             
+            <div class = "socials" style="margin-top: 50px;">
+                <p> connect with me on other platforms! </p>
+                <div id="sosmed-bar2">
+                    <div class="s-icon2">
+                        <div class="icon"">
+                            <a href="https://www.instagram.com/dayswithlia/" target="blank"><i class="fa fa-instagram"></i></a>
+                        </div>
+                        
+                        <div class="icon">
+                            <a href="https://open.spotify.com/user/aurelia.sindhu?si=39b75d9592ae4d3c" target="blank"><i class="fa fa-spotify"></i></a>
+                        </div>
+        
+                        <div class="icon">
+                            <a href="https://www.youtube.com/channel/UCb8ndl2PdjHTteVF-PLgK4w" target="blank"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class = "footer" style="background-color: #282538; padding: 15px">
@@ -299,8 +317,13 @@
             //     opacity: 0 
             // });
     
+            ScrollReveal().reveal('.socials', { 
+                delay: 900,
+                origin: 'bottom'
+            });
+
             ScrollReveal().reveal('.footer', { 
-                delay: 1200,
+                delay: 1000,
                 origin: 'bottom'
             });
     
