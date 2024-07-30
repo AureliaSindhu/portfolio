@@ -137,32 +137,84 @@
                     </div>              
                 </div>
             </div>
+            
+            <h1 class="libTitle" style="text-align: center;">Library</h1>
 
-            <div class="folder">
-                <h1>Library</h1>
-                <div class="openFolder" onclick="togglePopup()">
-                    <img src="pic/folder.png" alt="Folder Icon" class="folder-icon"/>
+            <div class="library">
+                <div class="folder1">
+                    <div class="openFolder" onclick="togglePopup('popup')">
+                        <img src="pic/arts.png" alt="Folder Icon" class="folder-icon"/>
+                    </div>
+                    <p> Arts </p>
+                </div>
+
+                <div class="folder2">
+                    <div class="openFolder" onclick="togglePopup('popup2')">
+                        <img src="pic/photography.png" alt="Folder Icon" class="folder-icon"/>
+                    </div>
+                    <p> Photography </p>
+                </div>
+
+                <div class="folder3">
+                    <div class="openFolder" onclick="togglePopup('popup3')">
+                        <img src="pic/bake.png" alt="Folder Icon" class="folder-icon"/>
+                    </div>
+                    <p> Baking </p>
+                </div>
+
+                <div class="folder4">
+                    <div class="openFolder" onclick="togglePopup('popup4')">
+                        <img src="pic/hackathons.png" alt="Folder Icon" class="folder-icon"/>
+                    </div>
+                    <p> Hackathons </p>
+                </div>
+                
+                <!-- Popup -->
+                <div class="popup" id="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="togglePopup('popup')">&times;</span>
+                        <img src="pic/arts.png" alt="Poster Image" class="poster"/>
+                    </div>
+                </div>
+
+                <div class="popup" id="popup2">
+                    <div class="popup-content">
+                        <span class="close" onclick="togglePopup('popup2')">&times;</span>
+                        <img src="pic/picss.png" alt="Poster Image" class="poster"/>
+                    </div>
+                </div>
+
+                <div class="popup" id="popup3">
+                    <div class="popup-content">
+                        <span class="close" onclick="togglePopup('popup3')">&times;</span>
+                        <img src="pic/homeCafe.png" alt="Poster Image" class="poster"/>
+                    </div>
+                </div>
+
+                <div class="popup" id="popup4">
+                    <div class="popup-content">
+                        <span class="close" onclick="togglePopup('popup4')">&times;</span>
+                        <img src="pic/hackss.png" alt="Poster Image" class="poster"/>
+                    </div>
                 </div>
             </div>
             
-            <!-- Popup for Poster -->
-            <div class="popup" id="popup">
-                <div class="popup-content">
-                    <span class="close" onclick="togglePopup()">&times;</span>
-                    <img src="pic/folder.png alt="Poster Image" class="poster"/>
-                </div>
-            </div>
-
             <script>
-                function togglePopup() {
-                    const popup = document.getElementById('popup');
-                    if (popup.style.display === 'flex') {
-                        popup.style.display = 'none';
+                function togglePopup(popupId) {
+                    var popup = document.getElementById(popupId);
+                    if (popup.classList.contains('active')) {
+                        popup.classList.remove('active');
                     } else {
-                        popup.style.display = 'flex';
+                        // Hide all popups first
+                        var popups = document.querySelectorAll('.popup');
+                        popups.forEach(function(p) {
+                            p.classList.remove('active');
+                        });
+                        popup.classList.add('active');
                     }
                 }
-            </script>
+            </script>            
+            
         </div>
 
         <div class = "footer" style="background-color: #282538; padding: 15px">
@@ -175,7 +227,7 @@
                 reset: false,
                 duration: 1400,
             });
-
+    
             // General reveal settings
             // ScrollReveal().reveal('.navbar', { 
             //     delay: 200,
@@ -183,39 +235,76 @@
             //     distance: '50px',
             //     opacity: 0.5 
             // });
-
+    
             ScrollReveal().reveal('.aboutSec .name', { 
                 delay: 400,
                 origin: 'left', 
                 distance: '50px',
                 opacity: 0 
             });
-
+    
             ScrollReveal().reveal('.aboutSec .intro', { 
                 delay: 600,
                 origin: 'bottom', 
                 distance: '50px',
                 opacity: 0 
             });
-
+    
             ScrollReveal().reveal('.aboutSec .recently', { 
                 delay: 800,
                 origin: 'right', 
                 distance: '50px',
                 opacity: 0 
             });
-
-            ScrollReveal().reveal('.aboutSec .folder', { 
-                delay: 1000,
-                origin: 'bottom', 
-                distance: '50px',
-                opacity: 0 
-            });
-
+    
+            // ScrollReveal().reveal('.libTitle', { 
+            //     delay: 1000,
+            //     origin: 'bottom', 
+            //     distance: '50px',
+            //     opacity: 0 
+            // });
+            
+            // ScrollReveal().reveal('.library', { 
+            //     delay: 1000,
+            //     origin: 'bottom', 
+            //     distance: '50px',
+            //     opacity: 0 
+            // });
+    
+            // ScrollReveal().reveal('.folder1', { 
+            //     delay: 1200,
+            //     origin: 'left', 
+            //     distance: '50px',
+            //     opacity: 0 
+            // });
+    
+            // ScrollReveal().reveal('.folder2', { 
+            //     delay: 1400,
+            //     origin: 'left', 
+            //     distance: '50px',
+            //     opacity: 0 
+            // });
+    
+            // ScrollReveal().reveal('.folder3', { 
+            //     delay: 1600,
+            //     origin: 'right', 
+            //     distance: '50px',
+            //     opacity: 0 
+            // });
+    
+            // ScrollReveal().reveal('.folder4', { 
+            //     delay: 1800,
+            //     origin: 'right', 
+            //     distance: '50px',
+            //     opacity: 0 
+            // });
+    
             ScrollReveal().reveal('.footer', { 
                 delay: 1200,
                 origin: 'bottom'
             });
-    </script>
+    
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
     </body>
 </html>

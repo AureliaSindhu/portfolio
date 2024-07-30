@@ -264,22 +264,25 @@
 
     <div class="connect">
         <div class = "collab">
-            <p> Interested to  collaborate together? </p>
-            <a href = "#"> contact me </a>
+            <!-- <p> Interested to </p>
+            <p> <span class="tgt""> collaborate </span> </p>
+            <p> together ?</p> -->
+            <p> Interested to <span class="tgt""> collaborate </span> together ?</p>
+            <a href = "mailto:aurelia.sindhu@gmail.com"> contact me </a>
         </div>
         <div class = "socials">
             <p> connect with me on other platforms! </p>
             <div id="sosmed-bar2">
-                <div class="s-icon">
-                    <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
+                <div class="s-icon2">
+                    <div class="icon"">
                         <a href="https://www.instagram.com/dayswithlia/" target="blank"><i class="fa fa-instagram"></i></a>
                     </div>
                     
-                    <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
+                    <div class="icon">
                         <a href="https://open.spotify.com/user/aurelia.sindhu?si=39b75d9592ae4d3c" target="blank"><i class="fa fa-spotify"></i></a>
                     </div>
     
-                    <div class="icon" style="background-color: #282538; padding: 10px; margin: 10px;">
+                    <div class="icon">
                         <a href="https://www.youtube.com/channel/UCb8ndl2PdjHTteVF-PLgK4w" target="blank"><i class="fa fa-youtube"></i></a>
                     </div>
                 </div>
@@ -332,13 +335,18 @@
             duration: 100
         });
 
-        ScrollReveal().reveal('.connect', { 
+        ScrollReveal().reveal('.collab', { 
             delay: 1000,
             origin: 'bottom'
         });
 
-        ScrollReveal().reveal('.footer', { 
+        ScrollReveal().reveal('.socials', { 
             delay: 1200,
+            origin: 'bottom'
+        });
+
+        ScrollReveal().reveal('.footer', { 
+            delay: 1400,
             origin: 'bottom'
         });
     });
