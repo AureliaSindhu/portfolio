@@ -1,6 +1,5 @@
 :root{
     /* font */
-    /* --font: "Santoshi", sans-serif; */
     --font: "General Sans", sans-serif;
     --secFont: "Boska", serif;
 
@@ -26,51 +25,9 @@
 }
 
 @font-face {
-    font-family: "General Sans";
-    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Bold.otf") format("opentype");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "General Sans";
-    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Light.otf") format("opentype");
-    font-weight: light;
-}
-
-@font-face {
-    font-family: "General Sans";
-    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Italic.otf") format("opentype");
-    font-weight: italic;
-}
-
-@font-face {
-    font-family: "General Sans";
-    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Light.otf") format("opentype");
-    font-weight: light;
-}
-
-@font-face {
-    font-family: "General Sans";
-    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Medium.otf") format("opentype");
-    font-weight: medium;
-}
-
-@font-face {
     font-family: "Boska";
     src: url("/font/Boska_Complete/Fonts/OTF/Boska-BlackItalic.otf") format("opentype");
     font-weight: BlackItalic;
-}
-
-@font-face {
-    font-family: "Boska";
-    src: url("/font/Boska_Complete/Fonts/OTF/Boska-BoldItalic.otf") format("opentype");
-    font-weight: BoldItalic;
-}
-
-@font-face {
-    font-family: "Boska";
-    src: url("/font/Boska_Complete/Fonts/OTF/Boska-MediumItalic.otf") format("opentype");
-    font-weight: MediumItalic;
 }
 
 *{
@@ -178,6 +135,10 @@ a:hover {
     color: var(--icon);
 }
 
+.title{
+    font-size: 10vh;
+}
+
 /* devpost icon */
 .fa-devpost {
     display: inline-block;
@@ -205,7 +166,7 @@ a:hover {
     height: 100vh; 
     width: 100%;
     bottom: 0;
-    margin-top: 40px;
+    margin: 40px 0;
     position: relative;
 }
 
@@ -233,7 +194,6 @@ a:hover {
 }
 
 .techCol h1{
-    /* font-size: 70px; */
     font-size: var(--title);
 }
 
@@ -648,12 +608,6 @@ a:hover {
     height: auto; 
 }
 
-@media (max-width: 768px) {
-    .projCol {
-        grid-template-columns: 1fr; 
-    }
-}
-
 .tags a{
     display: inline-flex;
     border-radius: 6px;
@@ -691,11 +645,6 @@ a:hover {
     position: relative;
     padding: 40px 100px;
     margin: 0 20px;
-}
-
-.intro {
-    display: flex;
-    align-items: center; 
 }
 
 .name {
@@ -925,4 +874,99 @@ a:hover {
     color: var(--prim);
     text-decoration: none;
     cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin: 2vh 5vh;
+        padding: 1vh 4vh; 
+    }
+
+    .left-side {
+        width: 100%; 
+        justify-content: center; 
+        margin-bottom: 1vh;
+    }
+
+    .right-side {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        margin-top: 1vh;
+    }
+
+    .right-side a {
+        margin: 0 5px;
+    }
+    /* home */
+    .title{
+        font-size: 5vh;
+    }
+
+    .auto-type, .auto-type span{
+        font-size: 2vh;
+    }
+
+    .bunny img{
+        max-width: 70%;
+    }
+
+    #about{
+        background-image: none;
+        height: auto; 
+    }
+
+    #sosmed-bar {
+        top: 0;
+        left: 0;
+        flex-direction: row; 
+    }
+
+    .s-icon{
+        padding: 0;
+        margin: 0 0 4vh 0;
+    }
+
+    .s-icon h3 {
+        display: none; 
+    }
+
+    .techCol h1{
+        font-size: var(--heading);
+    }
+    
+    .techCol a{
+        font-size: var(--paragraphs);
+    }
+
+    #projects h1{
+        font-size: var(--heading);
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    #funzies{
+        height: 80vh;
+    }
+
+    /* about */
+    .intro{
+        display: block;
+    }
+
+    /* projects */
+    .view-opt{
+        margin: 20px 0;
+    }
+
+    .custom-dropdown{
+        margin: 20px 0;
+    }
+    
+    .projCol {
+        grid-template-columns: 1fr; 
+    }
 }
