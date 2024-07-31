@@ -1,5 +1,6 @@
 :root{
     /* font */
+    /* --font: "Santoshi", sans-serif; */
     --font: "General Sans", sans-serif;
     --secFont: "Boska", serif;
 
@@ -25,9 +26,51 @@
 }
 
 @font-face {
+    font-family: "General Sans";
+    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Light.otf") format("opentype");
+    font-weight: light;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Italic.otf") format("opentype");
+    font-weight: italic;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Light.otf") format("opentype");
+    font-weight: light;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("/font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Medium.otf") format("opentype");
+    font-weight: medium;
+}
+
+@font-face {
     font-family: "Boska";
     src: url("/font/Boska_Complete/Fonts/OTF/Boska-BlackItalic.otf") format("opentype");
     font-weight: BlackItalic;
+}
+
+@font-face {
+    font-family: "Boska";
+    src: url("/font/Boska_Complete/Fonts/OTF/Boska-BoldItalic.otf") format("opentype");
+    font-weight: BoldItalic;
+}
+
+@font-face {
+    font-family: "Boska";
+    src: url("/font/Boska_Complete/Fonts/OTF/Boska-MediumItalic.otf") format("opentype");
+    font-weight: MediumItalic;
 }
 
 *{
