@@ -365,7 +365,6 @@ a:hover {
 /* funzies */
 #funzies{
     position: relative;
-    z-index: 1;
     height: 100vh;
     overflow: hidden;
     padding: 50px;
@@ -376,6 +375,7 @@ a:hover {
     font-size: var(--title);
     font-style: italic;
     margin-bottom: 20px;
+    z-index: 1000;
 }
 
 .funItem{
@@ -388,7 +388,7 @@ a:hover {
     --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
     overflow: hidden;
     position: absolute;
-    z-index: var(--zIndex);
+    /* z-index: var(--zIndex); */
     width: var(--width);
     height: var(--height);
     margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
@@ -716,7 +716,7 @@ a:hover {
 .me {
     height: auto; 
     margin-right: 20px; 
-    width: 110%;
+    max-width: 110%;
 }
 
 .bio p{
