@@ -256,6 +256,7 @@ a:hover {
 /* sosmed bar */
 #sosmed-bar{
     margin: 0px;
+    padding-top: 30px;
 }
 
 .s-icon{
@@ -966,6 +967,7 @@ a:hover {
         top: 0;
         left: 0;
         flex-direction: row; 
+        margin-top: 0;
     }
 
     .s-icon{
